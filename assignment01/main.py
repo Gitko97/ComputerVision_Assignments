@@ -58,10 +58,14 @@ def test_gradient():
     magnitude_result, orientation_result = gradient.get_gradient_magnitude_orientation(img)
 
     print("**" * 20)
+    print("Gradient X(row) : ")
     print(gradX)
+    print("Gradient Y(column) : ")
     print(gradY)
     print("==")
+    print("Magnitude Result : ")
     print(magnitude_result)
+    print("Orientation Result : ")
     print(orientation_result)
 
     magnitude_result = np.ravel(magnitude_result).astype(np.int32)
@@ -109,11 +113,11 @@ if __name__ == '__main__':
     cornerImage1 = CornerImage(blurImage1, patchSize)
     cornerImage2 = CornerImage(blurImage2, patchSize)
 
-    cornerImage1.clickPoints = [(410, 225), (42, 574), (527, 1080), (889, 725)]
-    cornerImage2.clickPoints = [(765, 337), (235, 339), (201, 1064), (761, 1095)]
+    # cornerImage1.clickPoints = [(410, 225), (42, 574), (527, 1080), (889, 725)]
+    # cornerImage2.clickPoints = [(765, 337), (235, 339), (201, 1064), (761, 1095)]
 
-    # cornerImage1.clickCorner()
-    # cornerImage2.clickCorner()
+    cornerImage1.clickCorner()
+    cornerImage2.clickCorner()
 
     ###
     test_gradient()

@@ -22,7 +22,7 @@ def compute_derivative_x(image):
     tmp_front[height-1] = image[height-1]
     tmp_back[0] = image[0]
 
-    tmp = (tmp_front-tmp_back) / 2
+    tmp = (tmp_front-tmp_back)
 
     return tmp
 
@@ -39,7 +39,7 @@ def compute_derivative_y(image):
     tmp_front[:,width - 1] = image[:,width - 1]
     tmp_back[:,0] = image[:,0]
 
-    tmp = (tmp_front - tmp_back) / 2
+    tmp = (tmp_front - tmp_back)
 
     return tmp
 
