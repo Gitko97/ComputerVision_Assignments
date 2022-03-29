@@ -11,17 +11,17 @@ def get_hog_list_with_cornerImage(cornerImage):
         normalized_image = gradient.normalize_image(grayScale)
 
         ####
-        gradX = gradient.compute_derivative_x(normalized_image)
-        gradY = gradient.compute_derivative_y(normalized_image)
-
-        fig, axes = plt.subplots(1, 3, figsize=(10, 5))
-        axes[0].set_title('GrayScale')
-        axes[0].imshow(grayScale, cmap='gray')
-        axes[1].set_title('Gradient X')
-        axes[1].imshow(gradient.normalize_image(gradX), cmap='gray')
-        axes[2].set_title('Gradient Y')
-        axes[2].imshow(gradient.normalize_image(gradY), cmap='gray')
-        plt.show()
+        # gradX = gradient.compute_derivative_x(normalized_image)
+        # gradY = gradient.compute_derivative_y(normalized_image)
+        #
+        # fig, axes = plt.subplots(1, 3, figsize=(10, 5))
+        # axes[0].set_title('GrayScale')
+        # axes[0].imshow(grayScale, cmap='gray')
+        # axes[1].set_title('Gradient X')
+        # axes[1].imshow(gradient.normalize_image(gradX), cmap='gray')
+        # axes[2].set_title('Gradient Y')
+        # axes[2].imshow(gradient.normalize_image(gradY), cmap='gray')
+        # plt.show()
         ####
 
         magnitude_result, orientation_result = gradient.get_gradient_magnitude_orientation(grayScale)
